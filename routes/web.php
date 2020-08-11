@@ -25,140 +25,16 @@ Route::get('/admin/dashborad', function () {
 })->name('admin.dashborad');
 
 
-Route::group(['prefix' => 'admin'], function () {
-//    Route::resource('posts', 'PostController');
-    Route::resource('comments', 'CommentController');
-  //  Route::resource('tags', 'TagController');
 
 
-  Route::get('/post/create',[
-    'uses' => 'PostController@create',
-    'as'=> 'post.create'
-]);
-
-Route::post('/post/store',[
-    'uses' => 'PostController@store',
-    'as'=> 'post.store'
-]);
-
-Route::get('/posts',[
-    'uses' => 'PostController@index',
-    'as'=> 'posts'
-]);
-
-
-Route::get('/post/edit/{id}',[
-    'uses' => 'PostController@edit',
-    'as'=> 'post.edit'
-]);
-
-Route::post('/post/update/{id}',[
-    'uses' => 'PostController@update',
-    'as'=> 'post.update'
-]);
-
-Route::get('/post/delete/{id}',[
-    'uses' => 'PostController@destroy',
-    'as'=> 'post.delete'
-]);
-
-###############################################################
-  /*Route::get('/tags',[
-    'uses' => 'TagController@index',
-    'as'=> 'tags'
-]);
-
-Route::get('/tag/create',[
-    'uses' => 'TagController@create',
-    'as'=> 'tag.create'
-]);
-
-Route::post('/tag/store',[
-    'uses' => 'TagController@store',
-    'as'=> 'tag.store'
-]);
-
-Route::get('/tag/edit/{id}',[
-    'uses' => 'TagController@edit',
-    'as'=> 'tag.edit'
-]);
-
-Route::post('/tag/update/{id}',[
-    'uses' => 'TagController@update',
-    'as'=> 'tag.update'
-]);
-
-Route::get('/tag/delete/{id}',[
-    'uses' => 'TagController@destroy',
-    'as'=> 'tag.delete'
-]);*/
 
 
 
 
 ###############################################################################
 
-/*Route::get('/category/create',[
-    'uses' => 'CategoryController@create',
-    'as'=> 'category.create'
-]);
-
-Route::get('/categories',[
-    'uses' => 'CategoryController@index',
-    'as'=> 'categories'
-]);
-
-Route::post('/category/store',[
-    'uses' => 'CategoryController@store',
-    'as'=> 'category.store'
-]);
-
-Route::get('/category/edit/{id}',[
-    'uses' => 'CategoryController@edit',
-    'as'=> 'category.edit'
-]);
-
-Route::post('/category/update/{id}',[
-    'uses' => 'CategoryController@update',
-    'as'=> 'category.update'
-]);
-
-Route::get('/category/delete/{id}',[
-    'uses' => 'CategoryController@destroy',
-    'as'=> 'category.delete'
-]);
 
 
-*/
-
-    
-});
-
-
-
-######################
-/*Route::group([
-    'prefix' => 'admin',
-    'as' => 'admin.',
-   // 'middleware' =>'auth',
-], function() {
-
-  
-
-    Route::prefix('categories')->as('categories.')->group(function() {
-        Route::get('/', 'CategoryController@index')->name('');
-        Route::get('/create', 'CategoryController@create')->name('create');
-        Route::get('/{id}', 'CategoryController@show')->name('show');
-        Route::get('/{id}/edit', 'CategoryController@edit')->name('edit');
-        Route::put('/{id}', 'CategoryController@update')->name('update');
-        Route::post('/', 'CategoryController@store')->name('store');
-        Route::delete('/{id}/delete', 'CategoryController@delete')->name('delete');
-    });
-
-    
-
-});
-*/
 
 ###
 Route::prefix('admin/categories')->name('admin.categories')->group(function () {
