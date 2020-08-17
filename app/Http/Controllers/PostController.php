@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Comment;
 use App\Post;
 use App\Tag;
 use Illuminate\Http\Request;
@@ -25,7 +26,7 @@ class PostController extends Controller
         ])
         ->paginate(2);*/
 
-         $posts =Post::paginate(6);
+         $posts =Post::paginate(3);
        // return view('admin.posts')->with('posts',$posts);
        return view('admin.posts.index')->with('posts' , $posts);
     }
@@ -191,6 +192,7 @@ class PostController extends Controller
         $post->tags()->detach();
       
         Storage::disk('public')->delete($post->url);
+        Comment::where('post_id',$id)->delete();
 
 
         return redirect()->route('admin.posts');

@@ -90,7 +90,7 @@
             <div class="form-group">
                 <label class="control-lable">Body</label>
                 <div>
-                  <textarea type="text" name="body" class="form-control @error('body') is-invalid @enderror" rows="6"> {{$post->body}} </textarea>
+                  <textarea type="text" id ="body" name="body" class="form-control @error('body') is-invalid @enderror" rows="6"> {{$post->body}} </textarea>
                   @error('body')
                   <p class="text-danger">{{$message}}</p>
                   @enderror
@@ -104,4 +104,32 @@
   </div>
 
 </section>
+@endsection
+
+@section('styles')
+
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+@endsection
+
+@section('scripts')
+
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+<script>
+        $('#body').summernote({
+          placeholder: 'Hello stand alone ui',
+          tabsize: 2,
+          height: 120,
+          toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'underline', 'clear']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview', 'help']]
+          ]
+        });
+      </script>
+    
 @endsection

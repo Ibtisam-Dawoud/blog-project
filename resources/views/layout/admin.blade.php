@@ -47,9 +47,7 @@
         <ul class="nav top-menu">
           <!-- settings start -->
           <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-              <i class="fa fa-user" title="profile"></i>
-            </a>
+           
             <ul class="dropdown-menu extended tasks-bar">
               <div class="notify-arrow notify-arrow-green"></div>
               <li>
@@ -222,7 +220,7 @@
       </div>
       <div class="top-menu">
         <ul class="nav pull-right top-menu">
-          <li><a class="logout" href="#">Logout</a></li>
+          <li><a class="logout" href="{{route('admin.logout')}}">Logout</a></li>
         </ul>
       </div>
     </header>
@@ -237,10 +235,11 @@
         <ul class="sidebar-menu" id="nav-accordion">
           <p class="centered">
             <a href="#">
-             
-              <img style="width: 100px; height: 100px;" src="#" class="img-circle" width="80" /></a>
+              @if($user = Auth::user())
+              <img style="width: 100px; height: 100px;" src="{{asset('admin_assets/img/user.png')}}" class="img-circle" width="80" /></a>
           </p>
-          <h5 class="centered">admin111</h5>
+          <h5 class="centered">{{$user->name}}</h5>
+          @endif
          
           <li class="mt">
             <a href="{{route('admin.dashborad')}}">

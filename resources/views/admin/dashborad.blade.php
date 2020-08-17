@@ -25,6 +25,7 @@
                         <p>Total Posts<br />
                             {{count(App\Post::get())}}
                         </p>
+                        <p><i class="fa fa-comment"></i> {{count(App\Comment::get())}}</p>
                       
                     </div>
                 </div>

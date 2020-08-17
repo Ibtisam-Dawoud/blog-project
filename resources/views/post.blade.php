@@ -46,7 +46,7 @@
                         @foreach($post->comments as $comment)
                         <li class="comment">
                             <div class="vcard bio">
-                                <img data-cfsrc="{{asset('assets/images/person_1.jpg')}}" alt="Image placeholder" style="display:none;visibility:hidden;"><noscript><img src="{{asset('assets/images/person_1.jpg')}}" alt="Image placeholder"></noscript>
+                                <img data-cfsrc="{{asset('front-assets/images/4.jpg')}}" alt="Image placeholder" style="display:none;visibility:hidden;"><noscript><img src="{{asset('front-assets/images/4.jpg')}}" alt="Image placeholder"></noscript>
                             </div>
                             <div class="comment-body">
                                 <h3>{{$comment->name}}</h3>
@@ -59,7 +59,7 @@
 
                     <div class="comment-form-wrap pt-5">
                         <h3 class="mb-5">Leave a comment</h3>
-                        <form method="post" action="#">
+                        <form method="post" action="{{route('comment',['id'=>$post->id])}}">
                             @csrf
                             <div class="form-group">
                                 <label for="name">Name *</label>
@@ -70,8 +70,8 @@
                                 <input type="email" class="form-control" name="email">
                             </div>
                             <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea name="message" cols="30" rows="10" class="form-control"></textarea>
+                                <label for="content">Content</label>
+                                <textarea name="content" cols="30" rows="10" class="form-control"></textarea>
                             </div>
                             <div class="form-group">
                                 <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
@@ -124,8 +124,8 @@
                     </div>
                 </div>
                 <div class="sidebar-box ftco-animate">
-                    <h3>Paragraph</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+                    <h3>Security</h3>
+                    <p> is freedom from, or resilience against, potential harm (or other unwanted coercive change) caused by others. Beneficiaries (technically referents) of security may be of persons and social groups, objects and institutions, ecosystems or any other entity or phenomenon vulnerable to unwanted change!</p>
                 </div>
             </div>
         </div>

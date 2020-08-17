@@ -29,16 +29,16 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="#"><span></span>Security<br><small>Blog</small></a>
+			<a class="navbar-brand" href="#"><span></span>InfoSec<br><small>Blog</small></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
 			</button>
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="{{route('home')}}" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="#" class="nav-link">About</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+					<li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+					<li class="nav-item"><a href="{{route('login')}}" class="nav-link">Login</a></li>
 				</ul>
 			</div>
 		</div>
@@ -66,7 +66,7 @@
 				<div class="col-lg-3 col-md-6 mb-5 mb-md-5">
 					<div class="ftco-footer-widget mb-4">
 						<h2 class="ftco-heading-2">About Us</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<p>The blog features multiple posts a day and covers every angle of computer security.</p>
 						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
 							<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 							<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
