@@ -18,12 +18,27 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', 'FrontEndController@index')->name('home');
 Route::get('/post/{id}', 'FrontEndController@show')->name('post');;
 Route::get('/categoryposts/{id}', 'FrontEndController@categoryposts')->name('categoryposts');
+<<<<<<< HEAD
 Route::post('/', 'FrontEndController@send')->name('contact');
+=======
+
+ Route::get('/Tagposts/{id}', 'FrontEndController@Tagposts')->name('Tagposts');
+
+Route::get('/admin/dashborad', function () {
+    return view('admin.dashborad');
+})->name('admin.dashborad');
+
+
+
+
+
+>>>>>>> b8ec23d99d63e96dbbaf1181a55f78b0829af534
 
 
  Route::get('/Tagposts/{id}', 'FrontEndController@Tagposts')->name('Tagposts');
  Route::post('/comment/{id}', 'FrontEndController@store')->name('comment');
 
+<<<<<<< HEAD
 
  Route::get('contact', function () {
     return view('contact');
@@ -40,6 +55,11 @@ Route::get('admin/logout', function () {
 })->name('admin.logout');
 
 ###############################################################################
+=======
+###############################################################################
+
+
+>>>>>>> b8ec23d99d63e96dbbaf1181a55f78b0829af534
 
 
 ###
@@ -74,6 +94,9 @@ Route::prefix('admin/posts')->middleware('auth')->name('admin.posts')->group(fun
     Route::put('/{id}', 'PostController@update')->name('.update');
     Route::delete('/{id}', 'PostController@destroy')->name('.delete');
 });
+<<<<<<< HEAD
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+=======
+>>>>>>> b8ec23d99d63e96dbbaf1181a55f78b0829af534
